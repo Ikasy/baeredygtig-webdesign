@@ -1,42 +1,294 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root{
+  --font-arial: Arial, helvetica, sans-serif;
+  --font-georgia: Georgia, serif;
+  --colour-peach: #fdce9a;
+  --colour-brown: #4a3112; /* originale var: 4A2C12*/
+  --colour-orange: #de922f;
+  --colour-light: #fbe8d7;
+  --colour-dark: #141414;
+  --nav-colour: hsla(0, 0%, 8%, 0.50);
+}
+
+*{
+  margin: 0;
+padding: 0;
+}
+
+body{
+background-color: var(--colour-dark);
+}
+
+h2{
+  color: var(--colour-orange);
+  font-size: calc(36px + 0.39065vw);
+  font-family: var(--font-georgia);
+  font-weight: 400;
+  margin-bottom: 1vh;
+}
+
+nav{
+  height: 70px;
+  background-color: var(--nav-colour);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1234;
+}
+
+nav div{
+  display: flex;
+  width: 20%;
+  margin-right: 5%;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.navlink{
+  color: var(--colour-peach);
+  text-decoration: none;
+  font-family: var(--font-arial);
+  font-size: calc(15px + 0.39065vw);
+}
+
+.landingboks{
+position: relative;
+width: 80vw;
+height: 50vh;
+background-color: var(--colour-brown); /* evt. en varmere brun? */
+border: var(--colour-peach) solid 2px;
+margin: auto;
+margin-top: 14%;
+z-index: 1;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.landingboks h1{
+  color: var(--colour-peach);
+  font-family: var(--font-georgia);
+  font-size: calc(55px + 0.39065vw);
+  font-weight: 400;
+  margin-left: 5%;
+}
+
+.bookmoedeboks{
+  position: absolute;
+  background-color: var(--colour-peach);
+  color: var(--colour-brown);
+  padding: 1vh 2vw;
+  padding-top: 2vh;
+  right: 20vw;
+  bottom: 15vh;
+  z-index:2;
+}
+
+.bookmoedeboks p{
+font-family: var(--font-arial);
+font-size: calc(18px + 0.39065vw);
+margin-bottom: 1vh;
+}
+
+button{
+  background-color: var(--colour-brown);
+  color: var(--colour-peach);
+  padding: 1.5vh 3vw;
+  font-family: var(--font-arial);
+  font-size: calc(14px + 0.39065vw);
+}
+
+.outline{
+position: absolute;
+border: var(--colour-peach) solid 2px;
+width: 80vw;
+height: 50vh;
+top: 20%;
+left: 6%;
+}
+
+.textboks{
+  width: 80vw;
+  height: auto;
+  margin: auto;
+  margin-top: 10vh;
+}
+
+.textboks p{
+  color: var(--colour-peach);
+  font-family: var(--font-arial);
+  font-size: calc(16px + 0.39065vw);
+}
+
+.textboks p:first-of-type{
+  margin-bottom: 2vh;
+}
+
+.righttekst p, .lefttekst p{
+  color: var(--colour-peach);
+  font-family: var(--font-arial);
+  font-size: calc(16px + 0.39065vw);
+  width: 90%;
+}
+
+.righttekst p:first-of-type, .lefttekst p:first-of-type{
+  margin-bottom: 2vh;
+}
+
+.righttekst, .lefttekst{
+  width: 80vw;
+  margin:auto;
+  position: relative; 
+  margin-top: 7vh;
+}
+
+.lilleboks{
+  position: absolute;
+  width: 25vw;
+  height: 35vh;
+  border: var(--colour-peach) 2px solid;
+  background: var(--colour-brown);
+}
+
+.lefttekst .lilleboks{
+  right: 0;
+  top: 8vh;
+}
+
+.righttekst .lilleboks{
+  left: 0;
+  top: 8vh;
+}
+
+.righttekst .storboks{
+  margin-left: 20vw;
+  box-sizing: border-box;
+  padding-left: 7.5vw;
+}
+
+.storboks{
+  width: 60vw;
+  height: 50vh;
+  border: var(--colour-peach) 2px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.lefttekst .storboks{
+  padding-left: 2vw;
+  padding-top: 2vh;
+}
+
+.greenhushwash{
+  width: 80vw;
+  height: auto;
+  display: flex;
+  margin: auto;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.greenhushwash h2{
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.greenhushwash p{
+  color: var(--colour-peach);
+  font-family: var(--font-arial);
+  font-size: calc(16px + 0.39065vw);
+  width: 75%;
+  margin:auto;
+  hyphens: auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.linje{
+  height: auto;
+  width: 2px;
+  background-color: var(--colour-peach);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.anmeldelsesbillede{
+  width: 20vw;
+  position: absolute;
+  left: 2.5vw;
+  bottom: -7vh;
 }
 
-.card {
-  padding: 2em;
+footer{
+background-color: var(--colour-peach);
+height: 50vh;
+margin-top: 10vh;
+color: var(--colour-brown)
 }
 
-.read-the-docs {
-  color: #888;
+footer div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  margin: auto;
+}
+
+.formular{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 5vh;
+}
+
+.kontakt{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+
+footer form{
+  display: flex;
+  flex-direction: column;
+}
+
+footer h3{
+font-family: var(--font-georgia);
+font-size: calc(32px + 0.39065vw);
+font-weight: 400;
+margin-bottom: 5vh;
+}
+
+footer a, footer p{
+color: var(--colour-brown);
+text-decoration: none;
+font-family: var(--font-arial);
+font-size: calc(16px + 0.39065vw);
+margin-top: 1vh;
+}
+
+input{
+  border: none;
+  background-color: var(--colour-light);
+  color: var(--colour-brown);
+  margin-bottom: 1vh;
+  padding: 1vh 1vw;
+  width: 20vw;
+  font-family: var(--font-arial);
+}
+
+#meetinginfo{
+  height: 5vh;
+  resize: none;
+  border: none;
+  background-color: var(--colour-light);
+  color: var(--colour-brown);
+  margin-bottom: 1vh;
+  padding: 1vh 1vw;
+  width: 20vw;
+  font-family: var(--font-arial);
+}
+
+.formular button{
+  padding: 1.4vh 1vw;
 }
