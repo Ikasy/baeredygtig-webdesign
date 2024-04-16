@@ -86,7 +86,7 @@ function Foot() {
                 />
                 <input value={mobilnummer}
                 onChange={(e)=>setMobilnummer(e.target.value)}
-                    type="number"
+                    type="tel"
                     name="mobilnummer"
                     placeholder="Dit Mobilnummer"
                     required

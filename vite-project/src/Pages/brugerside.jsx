@@ -1,4 +1,4 @@
-import Meeting from "../Components/meeting"
+import Kundemoede from "../Components/kundemoede"
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from '../firebase-config';
@@ -17,8 +17,9 @@ function Brugerside() {
   const [posts, setPosts] = useState([]);
   const [isPosts, setItPosts]= useState(true);
   const [status, setStatus] =useState("");
-  const [aktiveMoeder, setAktiveMoeder]=useState([]);
   const [nyeMoeder, setNyeMoeder]=useState([]);
+  const [aktiveMoeder, setAktiveMoeder]=useState([]);
+  const [filtrerMoeder, setFiltrerMoeder]=useState([]);
 
   useEffect(() => {
           if (loading) return;
@@ -62,74 +63,72 @@ function Brugerside() {
   getPosts();
 
   // Filtrering af møder efter "nyt møde" eller "aktive møde"
+  setFiltrerMoeder(posts.filter(moeder => moeder.email === sessionStorage.getItem("user")));
   setAktiveMoeder(posts.filter(moeder => moeder.status === "Aktivt møde"));
   setNyeMoeder(posts.filter(moeder => moeder.status === "Nyt møde"));
 
   }, [status, posts]);
 
-
 function handleButton(event) {
   const id = event.target.value;
   const handling = event.target.dataset.knap;
-  const url =`https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/moeder/${id}.json`;
+  const url = `https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/moeder/${id}.json`;
 
 
 
   if (handling === "skiftstatus") {
-      fetch(url, {
-          method: 'PATCH', //brug PATCH til at opdatere eksisterende data 
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({status: 'Aktivt møde'}), // ny status værdi
+    fetch(url, {
+      method: 'PATCH', //brug PATCH til at opdatere eksisterende data 
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ status: 'Aktivt møde' }), // ny status værdi
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Fejl ved ændring af status');
+        }
+        setStatus('status blev ændret for bestilling til "Aktivt møde" ')
       })
-          .then((response)=>{
-          if (!response.ok) {
-              throw new Error('Fejl ved ændring af status');
-          }
-              setStatus('status blev ændret for bestilling til "Aktivt møde" ')
-      })
-      .catch((error) =>{
-          setStatus ('Fejl ved ændring af satus', error)
+      .catch((error) => {
+        setStatus('Fejl ved ændring af satus', error)
       });
   } else { //gør det her når handling = "slet"
-      fetch(url, {
-          method: 'DELETE'
-      })
+    fetch(url, {
+      method: 'DELETE'
+    })
 
-          .then((response) =>{
-              if(!response.ok) {
-                  throw new Error('Fejl ved sletning af møde');
-              }
-              setStatus('Mødet blev slettet')
-          })
-          .catch((error)=>{
-              setStatus('Fejl ved sletning af møde', error)
-          });
-      }
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Fejl ved sletning af møde');
+        }
+        setStatus('Mødet blev slettet')
+      })
+      .catch((error) => {
+        setStatus('Fejl ved sletning af møde', error)
+      });
+  }
 }
 
-
+console.log(filtrerMoeder)
   return (
-    <div className="mødeside">
+    <div className="moedeside">
       <section className="page">
         <h1>Kommende møder</h1>
         <p>{status}</p>
-        {nyeMoeder.length > 0 && isPosts ? (
-          <div>
-            {nyeMoeder.map((moederobjekt) => (
-              <Meeting key={moederobjekt.id} moeder={moederobjekt}
-                handleButton={handleButton} />
+        {filtrerMoeder.length > 0 && isPosts && filtrerMoeder[0].status == "Nyt møde" ? (
+          <div className="nyemoeder">
+            {filtrerMoeder.map((moederobjekt) => (
+              <Kundemoede key={moederobjekt.id} moeder={moederobjekt}/>
             ))}
           </div>
         ) : (
-          <p>Ingen nye møder</p>
+          <p>Ingen møder</p>
         )}
-  
-        {aktiveMoeder.length > 0 && isPosts ? (
-          <div>
-            {aktiveMoeder.map((moederobjekt) => (
-              <Meeting key={moederobjekt.id} moeder={moederobjekt}
+          {filtrerMoeder.length > 0 && isPosts && filtrerMoeder[0].status =="Aktivt Møde" ? (
+          <div className="aktivemoeder">
+            {filtrerMoeder.map((moederobjekt) => (
+              <Kundemoede key={moederobjekt.id} moeder={moederobjekt}
                 handleButton={handleButton} />
             ))}
           </div>

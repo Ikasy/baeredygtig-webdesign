@@ -19,6 +19,20 @@ padding: 0;
   ejer - email = ejer@ejer.dk kode = ejerkode 
   udvikler - email = udvikler@udvikler.dk kode = udviklerkode */
 
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+::-webkit-scrollbar-track {
+  background: var(--colour-brown); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--colour-peach); 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--colour-orange); 
+  transition: 100ms;
+}
+
 body{
 background-color: var(--colour-dark);
 font-family: var(--font-arial);
@@ -36,6 +50,11 @@ h2{
   font-family: var(--font-georgia);
   font-weight: 400;
   margin-bottom: 1vh;
+}
+
+p{
+  font-family: var(--font-arial);
+  font-size: calc(16px + 0.39065vw);
 }
 
 button{
@@ -144,7 +163,6 @@ align-items: center;
 }
 
 .bookmoedeboks p{
-font-family: var(--font-arial);
 font-size: calc(18px + 0.39065vw);
 margin-bottom: 1vh;
 }
@@ -168,8 +186,6 @@ left: 10%;
 
 .textboks p{
   color: var(--colour-peach);
-  font-family: var(--font-arial);
-  font-size: calc(16px + 0.39065vw);
 }
 
 .textboks p:first-of-type{
@@ -178,8 +194,6 @@ left: 10%;
 
 .righttekst p, .lefttekst p{
   color: var(--colour-peach);
-  font-family: var(--font-arial);
-  font-size: calc(16px + 0.39065vw);
   width: 80%;
 }
 
@@ -248,8 +262,6 @@ left: 10%;
 
 .greenhushwash p{
   color: var(--colour-peach);
-  font-family: var(--font-arial);
-  font-size: calc(16px + 0.39065vw);
   width: 75%;
   margin:auto;
   hyphens: auto;
@@ -314,8 +326,6 @@ margin-bottom: 5vh;
 footer a, footer p{
 color: var(--colour-brown);
 text-decoration: none;
-font-family: var(--font-arial);
-font-size: calc(16px + 0.39065vw);
 margin-top: 1vh;
 }
 
@@ -384,7 +394,7 @@ input{
 }
 
 /* --------  bruger/ admin side ----------- */
-.mødeside{
+.moedeside{
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -400,5 +410,17 @@ input{
 
 .page h1{
   font-size: calc(39px + 0.39065vw);
+}
+
+.nyemoeder{
+  color: var(--colour-peach);
+  display: flex;
+  flex-direction: row;
+}
+
+.aktivemoeder{
+  color: var(--colour-orange);
+  display: flex;
+  flex-direction: row;
 }
 
