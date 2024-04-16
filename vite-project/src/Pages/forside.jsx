@@ -4,6 +4,7 @@ import Lefttext from '../Components/lefttext'
 import Righttext from '../Components/righttext'
 import Textboks from '../Components/textboks'
 import anmeldelsesbillede from '../assets/anmeldelse.svg'
+import Foot from '../Components/foot'
 // link til firebase: https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/
 function Forside() {
 // javascript her
@@ -51,6 +52,8 @@ function Forside() {
     src={anmeldelsesbillede}
     alt="anmeldelses billede af plante med cirkler"></Lefttext>
 
+
+  <Foot></Foot>
     </>
     // alt html her (inden for forældre <>)
   )

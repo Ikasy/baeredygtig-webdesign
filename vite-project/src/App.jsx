@@ -6,7 +6,7 @@ import Adminside from './Pages/adminside'
 import Brugerside from './Pages/brugerside'
 import Loginside from './Pages/loginside'
 import Omosside from './Pages/omosside'
-import Foot from './Components/foot'
+
 // link til firebase: https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/
 function App() {
 
@@ -26,7 +26,7 @@ function App() {
     <Route path="*" element={<Navigate to="/" />}></Route>
   </Routes>
 </main>
-<Foot></Foot>
+
 
     </>
 

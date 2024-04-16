@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.webp";
-import brugerikon from "../assets/profil1.png";
+import brugerikon from "../assets/profil1.svg";
 
 // link til firebase: https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/
 function Nav() {
@@ -13,7 +13,7 @@ function Nav() {
 <div>
 <NavLink to="/omosside" className="navlink">Om Plan.et</NavLink>
 <NavLink to="/loginside" className="navlink">
-<img src={brugerikon} alt="bruger ikon"></img> </NavLink>
+<img src={brugerikon} alt="bruger ikon"></img> Log ind</NavLink>
 </div>
 
 
