@@ -1,3 +1,5 @@
+import pcbillede from "../assets/bærbar.webp";
+
 // link til firebase: https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/
 function Landing() {
 // javascript her
@@ -5,8 +7,10 @@ function Landing() {
   return (
 <section>
     <div className="landingboks">
-        <h1>Få en ny <br/> optimeret <br/> hjemmeside</h1>
-        <img src="#" alt="landing billede med pc"/>
+        <h1>Få en ny <br/> <span>optimeret</span> <br/> hjemmeside</h1>
+        <div>
+        <img src={pcbillede}alt="landing billede med pc"/>
+        </div>
     </div>
 
     <div className="bookmoedeboks">

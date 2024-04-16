@@ -8,7 +8,7 @@ function Nav() {
 
   return (
 <nav>
-<NavLink to="/"> <img src={logo} alt="logo"></img> </NavLink>
+<NavLink to="/"> <img src={logo} className="logo" alt="logo"></img> </NavLink>
 
 <div>
 <NavLink to="/omosside" className="navlink">Om Plan.et</NavLink>
