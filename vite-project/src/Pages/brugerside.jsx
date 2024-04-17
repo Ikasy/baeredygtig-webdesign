@@ -17,8 +17,7 @@ function Brugerside() {
   const [posts, setPosts] = useState([]);
   const [isPosts, setItPosts]= useState(true);
   const [status, setStatus] =useState("");
-  const [nyeMoeder, setNyeMoeder]=useState([]);
-  const [aktiveMoeder, setAktiveMoeder]=useState([]);
+
   const [filtrerMoeder, setFiltrerMoeder]=useState([]);
 
   useEffect(() => {
@@ -64,8 +63,7 @@ function Brugerside() {
 
   // Filtrering af møder efter "nyt møde" eller "aktive møde"
   setFiltrerMoeder(posts.filter(moeder => moeder.email === sessionStorage.getItem("user")));
-  setAktiveMoeder(posts.filter(moeder => moeder.status === "Aktivt møde"));
-  setNyeMoeder(posts.filter(moeder => moeder.status === "Nyt møde"));
+ 
 
   }, [status, posts]);
 
@@ -114,27 +112,18 @@ console.log(filtrerMoeder)
   return (
     <div className="moedeside">
       <section className="page">
-        <h1>Kommende møder</h1>
+        <h1>Kalender</h1>
         <p>{status}</p>
-        {filtrerMoeder.length > 0 && isPosts && filtrerMoeder[0].status == "Nyt møde" ? (
+        {filtrerMoeder.length > 0 && isPosts ? (
           <div className="nyemoeder">
             {filtrerMoeder.map((moederobjekt) => (
-              <Kundemoede key={moederobjekt.id} moeder={moederobjekt}/>
+              <Kundemoede key={moederobjekt.id} moeder={moederobjekt} handleButton={handleButton}/>
             ))}
           </div>
         ) : (
           <p>Ingen møder</p>
         )}
-          {filtrerMoeder.length > 0 && isPosts && filtrerMoeder[0].status =="Aktivt Møde" ? (
-          <div className="aktivemoeder">
-            {filtrerMoeder.map((moederobjekt) => (
-              <Kundemoede key={moederobjekt.id} moeder={moederobjekt}
-                handleButton={handleButton} />
-            ))}
-          </div>
-        ) : (
-          <p>Ingen aktive møder</p>
-        )}
+          
       </section>
       
     </div>

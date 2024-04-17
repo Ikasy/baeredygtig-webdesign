@@ -1,3 +1,5 @@
+import Lottie from "lottie-react"
+import tyskland from "../assets/Tysklandpiesvg.json"
 // link til firebase: https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/
 function Lefttext(props) {
     // javascript her
@@ -12,7 +14,7 @@ function Lefttext(props) {
 
         </div>     
         <div className="lilleboks">
-            <img className="anmeldelsesbillede" src={props.src} alt={props.alt}/>
+        <Lottie className="" animationData={tyskland}></Lottie> 
             </div>
         </section>
     

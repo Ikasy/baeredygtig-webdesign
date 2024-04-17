@@ -5,12 +5,14 @@ function Righttext(props) {
       return (
         <section className="righttekst">
           <div className="lilleboks">
-          <img src={props.src} alt={props.alt}/>
-          </div>
+        <iframe className="" src={props.src}></iframe>
+            </div>
+
           <div className="storboks">
             <h2>{props.overskrift}</h2>
             <p>{props.tekst}</p>
             <p>{props.tekst2}</p>
+            
 
           </div>
         </section>

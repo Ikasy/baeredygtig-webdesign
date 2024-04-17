@@ -126,7 +126,6 @@ align-items: center;
   height: 100%;
   display: flex;
   align-items: center;
-  padding-left: 10vw;
 }
 
 .landingboks h1{
@@ -145,7 +144,7 @@ align-items: center;
 }
 
 .landingboks span{
-  font-family: 'freestyle script', sans-serif;
+  font-family: 'freestyle script', "apple chancery", sans-serif;
   color: var(--colour-orange);
   font-size: 96px;
   letter-spacing: 1vw;
@@ -327,6 +326,11 @@ footer a, footer p{
 color: var(--colour-brown);
 text-decoration: none;
 margin-top: 1vh;
+font-size: calc(15px + 0.39065vw);
+}
+
+footer a img{
+  width: 1vw;
 }
 
 input{
@@ -410,6 +414,11 @@ input{
 
 .page h1{
   font-size: calc(39px + 0.39065vw);
+  margin: 1vh 2vw;
+}
+.page p{
+  color: var(--colour-orange);
+  margin-left: 2vw;
 }
 
 .nyemoeder{
@@ -424,3 +433,50 @@ input{
   flex-direction: row;
 }
 
+.kundemoede div{
+  margin: 1vh 2vw; 
+}
+
+.sletknap{
+  border: #fdce9a solid 2px;
+  margin-top: 1vh;
+  padding: 1vh 0 0 0;
+  width: 100%;
+}
+.sletknap img{
+  width: 1.5vw;
+}
+
+iframe{
+  border: none;
+  scale: 1.5;
+
+}
+
+.firesektioner{
+  text-align: center;
+  margin-top: 20vh;
+}
+
+.firesektioner div{
+display: flex;
+justify-content: space-between;
+width: 70vw;
+margin: auto;
+color: #fdce9a;
+}
+
+.firesektioner div section{
+  border: #fdce9a solid 2px;
+  width: 20%;
+}
+
+.firesektioner h1{
+  color: #de922f;
+}
+
+.vaerdi{
+  width: 70vw;
+  margin: auto;
+  margin-top: 10vh;
+}
