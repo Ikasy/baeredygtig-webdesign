@@ -488,3 +488,80 @@ color: #fdce9a;
   margin: auto;
   margin-top: 10vh;
 }
+
+@media screen and (max-width: 1400px){
+  .bookmoedeboks{
+    bottom: 20vh;
+  }
+
+  nav div{
+    display: flex;
+    width: 20%;
+    margin-right: 5%;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .outline{
+    position: absolute;
+    border: var(--colour-peach) solid 2px;
+    width: 70vw;
+    height: 50vh;
+    top: 12%;
+    left: 10%;
+    }
+  .anmeldelsesbillede{
+    bottom: 0vh;
+  }
+}
+
+@media screen and (max-width: 1000px){
+ .landingboks, .outline, .textboks, .righttekst, .lefttekst, .greenhushwash, footer div, .page, .firesektioner div, .vaerdi{
+ width: 80vw;
+ }
+ .storboks{
+  width: 100%;
+  margin: 0;
+  height: auto;
+ }
+ .imgleft .storboks, .imgright .storboks{
+  border:none;
+ }
+ .imgleft .lilleboks, .imgright .lilleboks{
+  padding: 10% 0;
+  }
+ .lilleboks{
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+ }
+ .righttekst .storboks, .lefttekst .storboks{
+  margin-left: 0;
+  margin: auto;
+  padding: 0;
+ }
+ .righttekst p, .lefttekst p {
+  margin: auto;
+ }
+ .righttekst h2, .lefttekst h2 {
+  margin: auto;
+  width: 80%
+ }
+ .righttekst .lilleboks, .lefttekst .lilleboks {
+  top:0;
+  }
+  .anmeldelsesbillede{
+    position:relative;
+  }
+  .lefttekst:last-of-type{
+    background-color: none;
+    display: flex;
+    border: none;
+    flex-direction: column-reverse;
+  }
+  .lefttekst:last-of-type .lilleboks{
+    background-color: #141414;
+    border: none;
+  }
+}
