@@ -1,4 +1,5 @@
-import pcbillede from "../assets/bærbar.webp";
+import pcbillede from "../assets/baerbar.webp";
+import textureImage from '../assets/texturefour.svg';
 
 // link til firebase: https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/
 function Landing() {
@@ -8,7 +9,7 @@ function Landing() {
 <section>
     <div className="landingboks">
         <h1>Få en ny <br/> <span>optimeret</span> <br/> hjemmeside</h1>
-        <div>
+        <div style={{backgroundImage: `linear-gradient(to right, rgba(74, 49, 18, 1), rgba(74, 49, 18, 0)), url(${textureImage})`}}>
         <img src={pcbillede}alt="landing billede med pc"/>
         </div>
     </div>

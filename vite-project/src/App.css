@@ -122,7 +122,6 @@ align-items: center;
 }
 
 .landingboks div{
-  background-image: linear-gradient(to right, rgba(74, 49, 18, 1), rgba(74, 49, 18, 0)),url(assets/texture4.svg);
   height: 100%;
   display: flex;
   align-items: center;
@@ -211,6 +210,8 @@ left: 10%;
   position: absolute;
   width: 25vw;
   height: 35vh;
+  display: flex;
+  align-items: center;
   border: var(--colour-peach) 2px solid;
   background: var(--colour-brown);
 }
@@ -445,12 +446,6 @@ input{
 }
 .sletknap img{
   width: 1.5vw;
-}
-
-iframe{
-  border: none;
-  scale: 1.5;
-
 }
 
 .firesektioner{

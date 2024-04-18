@@ -1,11 +1,14 @@
+import Lottie from "lottie-react"
+
 // link til firebase: https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/
 function Righttext(props) {
     // javascript her
-    
+    const { animationData } = props;
+
       return (
         <section className="righttekst">
           <div className="lilleboks">
-        <iframe className="" src={props.src}></iframe>
+            <Lottie animationData={animationData} />
             </div>
 
           <div className="storboks">

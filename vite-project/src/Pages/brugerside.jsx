@@ -108,7 +108,6 @@ function handleButton(event) {
   }
 }
 
-console.log(filtrerMoeder)
   return (
     <div className="moedeside">
       <section className="page">
@@ -125,7 +124,8 @@ console.log(filtrerMoeder)
         )}
           
       </section>
-      
+      <h2>Du er logget på som {user && userInSession && user.email}</h2>
+            <button onClick={handleLogout}>Logout</button>
     </div>
     
   )
