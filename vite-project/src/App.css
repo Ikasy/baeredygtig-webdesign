@@ -54,7 +54,8 @@ h2{
 
 p{
   font-family: var(--font-arial);
-  font-size: calc(16px + 0.39065vw);
+  font-size: calc(14px + 0.39065vw);
+  line-height: 3vh;
 }
 
 button{
@@ -157,7 +158,7 @@ align-items: center;
   padding-top: 2vh;
   right: 17vw;
   bottom: 13vh;
-  z-index:2;
+  z-index:22;
 }
 
 .bookmoedeboks p{
@@ -179,7 +180,7 @@ left: 10%;
   width: 70vw;
   height: auto;
   margin: auto;
-  margin-top: 10vh;
+  margin-top: 20vh;
 }
 
 .textboks p{
@@ -203,7 +204,8 @@ left: 10%;
   width: 70vw;
   margin:auto;
   position: relative; 
-  margin-top: 7vh;
+  margin-bottom: 15vh;
+  margin-top: 5vh;
 }
 
 .lilleboks{
@@ -212,6 +214,7 @@ left: 10%;
   height: 35vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   border: var(--colour-peach) 2px solid;
   background: var(--colour-brown);
 }
@@ -225,7 +228,11 @@ left: 10%;
   left: 0;
   top: 8vh;
 }
-
+.lottie{
+  width: 90%;
+  margin:auto;
+  padding: 0;
+}
 .righttekst .storboks{
   margin-left: 20vw;
   box-sizing: border-box;
@@ -241,7 +248,12 @@ left: 10%;
   justify-content: center;
 
 }
-
+.imgleft .lilleboks, .imgright .lilleboks{
+  flex-direction: column;
+}
+.imgleft .storboks, .imgright .storboks{
+  padding:0;
+}
 .lefttekst .storboks{
   padding-left: 2vw;
   padding-top: 2vh;
@@ -249,11 +261,12 @@ left: 10%;
 
 .greenhushwash{
   width: 70vw;
-  height: auto;
+  height: 150%;
   display: flex;
   margin: auto;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  padding-bottom: 5vh;
 }
 
 .greenhushwash h2{
@@ -285,7 +298,7 @@ left: 10%;
 footer{
 background-color: var(--colour-peach);
 height: 50vh;
-margin-top: 10vh;
+margin-top: 20vh;
 color: var(--colour-brown)
 }
 
@@ -330,8 +343,8 @@ margin-top: 1vh;
 font-size: calc(15px + 0.39065vw);
 }
 
-footer a img{
-  width: 1vw;
+footer a:nth-child(3) img{
+  width: 25px;
 }
 
 input{

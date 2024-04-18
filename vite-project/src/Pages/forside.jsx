@@ -2,6 +2,8 @@ import Greenhushwash from '../Components/greenhushwash'
 import Landing from '../Components/landing'
 import Lefttext from '../Components/lefttext'
 import Righttext from '../Components/righttext'
+import Imgleft from '../Components/imgleft'
+import Imgright from '../Components/imgright'
 import Textboks from '../Components/textboks'
 import anmeldelsesbillede from '../assets/anmeldelse.svg'
 import Foot from '../Components/foot'
@@ -16,16 +18,19 @@ import textureImage from '../assets/firkanter.svg';
 
 // link til firebase: https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/
 function Forside() {
-
+  const scrollToFooter = () => {
+    const footer = document.getElementById('footer');
+    console.log("virker1");
+      footer.scrollIntoView({ behavior: 'smooth' });
+      console.log("virker");
     
-
-
+  };
 
 // javascript her
 
   return (
     <>
-    <Landing>
+    <Landing scrollToFooter={scrollToFooter}>
     </Landing>
 
     <Textboks overskrift="Hvad tilbyder vi?" 
@@ -43,28 +48,29 @@ function Forside() {
 
     <Textboks overskrift="Internettet udleder også CO2"
     tekst="Selvom det måske ikke er åbenlyst, bidrager internettet også til CO2-udledningen. Hos vores webbureau er vi opmærksomme på denne påvirkning, og vi arbejder på at minimere vores digitale fodaftryk gennem bæredygtigt webdesign. Ved at vælge effektive designprincipper og miljøvenlige teknologier stræber vi efter at skabe hjemmesider, der ikke kun er funktionelle, men også skånsomme mod miljøet."></Textboks>
+    <div style={{backgroundImage:`url(${textureImage})`}}>
 
-    <Righttext overskrift="Tyskland" 
+    <Imgleft overskrift="Tyskland" 
     tekst="Tyskland udleder 2.17% af den globale udledning af CO2, og er derfor nummer seks på listen over de lande der udleder mest. "
     animationData={tyskland}
-    ></Righttext>
+    ></Imgleft>
   
-    <div style={{backgroundImage:`url(${textureImage})`}}>
-      <Lefttext overskrift="Kina" 
+      <Imgright overskrift="Kina" 
       tekst="Kina udleder 29.18% af den globale udledning af CO2 og ligger derfor nummer et på listen over de lande der udleder mest."
       animationData={kina}
-      ></Lefttext>
+      ></Imgright>
 
-      <Righttext overskrift="Internettet" 
+      <Imgleft overskrift="Internettet" 
       tekst="Den mængde CO2 som internettet og it branchen udleder vil altså svare til 3.51% af den globale udledning af CO2. Det vil sige, at hvis internettet var et land, så ville det stjæle Tysklands position på 6. pladsen"
       animationData={internetpit}
-      ></Righttext>
+      ></Imgleft>
 
       <Greenhushwash></Greenhushwash>
     </div>
-    <h2 style={{textAlign:"center"}}>Anmeldelse</h2>
-
-    <Anmeldelse tekst="lorem ipsum"
+    <Anmeldelse 
+    overskrift= "Anmeldelser"
+    tekst='"Plan.et leverede en fremragende service til min lille virksomhed med deres fokus på bæredygtigt webdesign. Resultatet var både smukt og funktionelt, og jeg satte pris på den positive miljøpåvirkning, vores nye hjemmeside havde. Jeg kan varmt anbefale Plan.et til andre små virksomheder, der ønsker at gøre en forskel online."'
+    tekst2="- Kunde ejer, djaiosd"
     src={anmeldelsesbillede}
     alt="anmeldelses billede af plante med cirkler"></Anmeldelse>
 

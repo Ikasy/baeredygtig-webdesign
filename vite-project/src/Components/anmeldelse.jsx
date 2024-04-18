@@ -7,8 +7,8 @@ function Anmeldelse(props) {
     
         <div className="storboks">
             <h2>{props.overskrift}</h2>
-            <p>{props.tekst}</p>
-            <p>{props.tekst2}</p>
+            <p style={{fontStyle:"italic"}}>{props.tekst}</p>
+            <p style={{textAlign:"right", fontStyle:"italic", color:"#de922f" }}>{props.tekst2}</p>
 
         </div>     
         <div className="lilleboks">

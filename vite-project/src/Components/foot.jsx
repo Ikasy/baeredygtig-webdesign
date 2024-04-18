@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import telefon from "../assets/telefon.svg"
 import mail from "../assets/kontakt.svg"
+import hus from "../assets/hus.svg"
 
 import { useEffect, useState } from "react";
 // link til firebase: https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/
@@ -62,14 +63,14 @@ function Foot() {
 
 
     return (
-        <footer>      
+        <footer id="footer">      
         
             <div>  
             <div className="kontakt"> 
                 <h3>Er du interesseret i at høre mere?</h3>
-                <a href="tel: +45 12345678">+45 12345678 <img src={telefon} alt="telefon ikon" /></a> 
-                <a href="mailto: Kontakt@Plan.et.dk">Kontakt@Plan.et.dk <img src={mail} alt="mail ikon" /></a>
-                <p>Planetvej 1, Earth 0000</p>
+                <a href="tel: +45 12345678"><img src={telefon} alt="telefon ikon" /> +45 12 34 56 78 </a> 
+                <a href="mailto: Kontakt@Plan.et.dk"><img src={mail} alt="mail ikon" /> Kontakt@Plan.et.dk </a>
+                <a href="#"><img src={hus} alt="hus ikon" /> Planetvej 1, Earth 0000</a>
             </div>
             <div className="formular">
             <form onSubmit={handleSubmit}>

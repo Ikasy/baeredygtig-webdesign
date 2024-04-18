@@ -1,18 +1,18 @@
 import Lottie from "lottie-react"
 
 // link til firebase: https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/
-function Righttext(props) {
+function Imgleft(props) {
     // javascript her
     const { animationData } = props;
 
       return (
-        <section className="righttekst">
-          <div className="lilleboks">
-            <Lottie animationData={animationData} />
+        <section className="righttekst imgleft">
+          <div className="storboks">
+            <Lottie className="lottie" animationData={animationData} />
             <img src={props.src} alt={props.src}></img>
             </div>
 
-          <div className="storboks">
+          <div className="lilleboks">
             <h2>{props.overskrift}</h2>
             <p>{props.tekst}</p>
             <p>{props.tekst2}</p>
@@ -25,5 +25,5 @@ function Righttext(props) {
       )
     }
     
-    export default Righttext
+    export default Imgleft
     

@@ -11,9 +11,7 @@ function Lefttext(props) {
               <h2>{props.overskrift}</h2>
               <p>{props.tekst}</p>
               <p>{props.tekst2}</p>
-          </div> 
-
-          
+          </div>     
           <div className="lilleboks">
             <Lottie animationData={animationData} />
             <img src={props.src} alt={props.src}></img>
