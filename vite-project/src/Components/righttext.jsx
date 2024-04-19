@@ -9,7 +9,7 @@ function Righttext(props) {
         <section className="righttekst">
           <div className="lilleboks">
             <Lottie animationData={animationData} />
-            <img src={props.src} alt={props.src}></img>
+            <img className="billede" src={props.src} alt={props.src}></img>
             </div>
 
           <div className="storboks">

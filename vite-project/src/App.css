@@ -222,11 +222,18 @@ nav div {
   right: 17vw;
   bottom: 13vh;
   z-index: 22;
+  max-width: 50vw;
+
 }
 
 .bookmoedeboks p {
   font-size: calc(18px + 0.39065vw);
   margin-bottom: 1vh;
+  width: 100%;
+}
+
+.bookmoedeboks button {
+  padding: 1.5vh 5vw;
 }
 
 .outline {
@@ -353,7 +360,7 @@ nav div {
 
 .linje {
   height: auto;
-  width: 2px;
+  width: 3px;
   background-color: var(--colour-peach);
 }
 
@@ -482,10 +489,12 @@ input {
   color: var(--colour-brown);
   background-color: var(--colour-orange);
 }
-.ux{
+
+.ux {
   color: red;
   font-size: calc(5px + 0.39065vw);
 }
+
 /* --------  bruger/ admin side ----------- */
 .moedeside {
   margin-top: 20vh;
@@ -493,15 +502,17 @@ input {
   justify-content: center;
   align-items: center;
 }
-.adminknap{
+
+.adminknap {
   padding: 0;
   width: 100%;
 }
+
 .page {
   width: 70vw;
   background-color: var(--colour-brown);
   border: var(--colour-peach) 2px solid;
-  
+
 }
 
 .page h1 {
@@ -569,7 +580,7 @@ input {
   margin-top: 10vh;
 }
 
-.lilleboks img{
+.lilleboks .billede {
   max-width: 20vw;
   height: auto;
 }
@@ -702,7 +713,7 @@ input {
 
 
   .bookmoedeboks {
-    bottom: 40vh;
+    bottom: 35vh;
     z-index: 22;
   }
 
@@ -730,6 +741,12 @@ input {
     height: 8.5vh;
     margin-top: 2vw;
   }
+
+  .bookmoedeboks {
+    bottom: 37vh;
+    z-index: 22;
+  }
+
 }
 
 @media screen and (max-width: 755px) {
@@ -750,8 +767,8 @@ input {
     position: absolute;
     top: 12vw;
     left: -5vw;
+  }
 }
-} 
 
 @media screen and (max-width: 700px) {
   .lottie {
@@ -759,42 +776,214 @@ input {
     height: auto;
   }
 
-  .landingboks, .outline, .textboks, .righttekst, .lefttekst, footer div, .page, .firesektioner div, .vaerdi {
+  .landingboks,
+  .outline,
+  .textboks,
+  .righttekst,
+  .lefttekst,
+  footer div,
+  .page,
+  .firesektioner div,
+  .vaerdi {
     width: 80vw;
   }
 
-  .lefttekst{
+  .lefttekst {
     display: flex;
     flex-direction: column-reverse;
     margin: auto;
   }
 
-  .lefttekst .lilleboks{
+  .lefttekst .lilleboks {
     position: relative;
     margin: auto;
     width: 100%;
   }
 
-  .lefttekst .storboks{
+  .lefttekst .storboks {
     width: 100%;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 5vh;
   }
 
-  .lefttekst .storboks h2, .lefttekst .storboks p{
+  .lefttekst .storboks h2,
+  .lefttekst .storboks p {
     width: 80%;
   }
 
-  nav{
+  nav {
     height: 45px;
   }
 
+  h1 {
+    font-size: calc(32px + 0.39065vw) !important;
+  }
+
+  .landingboks span {
+    font-size: 50px;
+  }
+
+  .landingboks {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 25vw;
+  }
+
+  .landingboks div {
+    background-image: linear-gradient(180deg, rgba(74, 49, 18, 1), rgba(74, 49, 18, 0)),
+    url(${textureImage});
+    width: 100%;
+  }
+
+  .landingboks div img {
+    margin: auto;
+  }
+
+  .landingboks h1 {
+    margin: 0;
+  }
+
+  .bookmoedeboks {
+    width: 100%;
+    height: auto;
+    position: relative;
+    bottom: auto;
+    top: auto;
+    right: auto;
+    left: auto;
+    margin: auto;
+    padding: 1vw 15.1vw;
+    text-align: center;
+    border: var(--colour-peach) 2px solid;
+  }
+
+  .textboks {
+    margin-top: 5vh;
+  }
+
+
+  .imgright,
+  .imgleft, .lefttekst, .righttekst {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+    width: 80vw;
+  }
+
+  .imgleft .lilleboks,
+  .imgright .lilleboks, .lefttekst .lilleboks, .righttekst .lilleboks  {
+    position: relative;
+    bottom: auto;
+    top: auto;
+    right: auto;
+    left: auto;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    padding: 4vw 0 2vw 0;
+    margin-bottom: 5vw;
+  }
+
+  .imgleft .storboks,
+  .imgright .storboks, .lefttekst .storboks, .righttekst .storboks  {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .lottie {
+    position: relative !important;
+    top: 0 !important;
+    padding-right: 0 !important;
+    bottom: auto !important;
+    right: auto !important;
+  }
+
+  .imgleft .lottie {
+    left: -3vw !important;
+  }
+
+  .imgright .lottie {
+    left: 0 !important;
+  }
+
+  .storboks {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .greenhushwash {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    width: 80vw;
+    padding-bottom: 0;
+  }
+
+  footer{
+    margin-top: 5vh;
+    height: auto;
+  }
+  footer div{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 5vh;
+  }
+
+  .formular, input, form, #meetinginfo{
+    width: 100%;
+  }
+
+  .formular button{
+    margin: auto;
+    margin-bottom: 5vh;
+    padding: 1vh 3vw;
+  }
+
+  .linje {
+    width: 100%;
+    height: 3px;
+  }
+
+  .anmeldelsesbillede {
+    position: relative;
+    top: 0;
+    padding-right: 0;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    width: 25vw !important;
+  }
+
+  .righttekst,
+  .lefttekst {
+    margin-bottom: 5vw !important;
+  }
+
+
+
 }
+
 @media screen and (max-width: 500px) {
-  .lottie{
+  .lottie {
     max-width: 70vw;
     height: auto;
   }
+
+  .anmeldelsesbillede {
+    width: 30vw !important;
+  }
+
 }

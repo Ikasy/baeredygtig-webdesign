@@ -13,7 +13,7 @@ function Landing(props) {
       </div>
 
       <div className="bookmoedeboks">
-        <p>Få en gratis <br/> samtale <br/></p>
+        <p>Få en gratis samtale <br/></p>
         {/* Call scrollToFooter when button is clicked */}
         <button onClick={props.scrollToFooter}>Book møde</button>
       </div>
