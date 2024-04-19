@@ -425,7 +425,10 @@ input {
   color: var(--colour-brown);
   background-color: var(--colour-orange);
 }
-
+.ux{
+  color: red;
+  font-size: calc(5px + 0.39065vw);
+}
 /* --------  bruger/ admin side ----------- */
 .moedeside {
   height: 100vh;

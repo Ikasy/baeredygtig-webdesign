@@ -27,7 +27,7 @@ function Loginside() {
       }
     } catch (error) {
       console.error(error);
-      setStatus("Hovsa! Brugernavn og password stemmer ikke overens.")
+      setStatus("*Hovsa! Brugernavn og password stemmer ikke overens.")
     }
   }
 
@@ -53,7 +53,7 @@ function Loginside() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          {status}
+          <p className="ux">{status}</p>
           <button type="submit">Log ind</button>
         </form>
       </div>
