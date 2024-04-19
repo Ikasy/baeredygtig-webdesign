@@ -1,17 +1,18 @@
-:root{
+:root {
   --font-arial: Arial, helvetica, sans-serif;
   --font-georgia: Georgia, serif;
   --colour-peach: #fdce9a;
-  --colour-brown: #4a3112; /* originale var: 4A2C12*/
+  --colour-brown: #4a3112;
+  /* originale var: 4A2C12*/
   --colour-orange: #de922f;
   --colour-light: #fbe8d7;
   --colour-dark: #141414;
   --nav-colour: hsla(0, 0%, 8%, 0.60);
 }
 
-*{
+* {
   margin: 0;
-padding: 0;
+  padding: 0;
 }
 
 /* firebase log in -----
@@ -22,29 +23,32 @@ padding: 0;
 ::-webkit-scrollbar {
   width: 0.5vw;
 }
+
 ::-webkit-scrollbar-track {
-  background: var(--colour-brown); 
+  background: var(--colour-brown);
 }
+
 ::-webkit-scrollbar-thumb {
-  background: var(--colour-peach); 
+  background: var(--colour-peach);
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--colour-orange); 
+  background: var(--colour-orange);
   transition: 100ms;
 }
 
-body{
-background-color: var(--colour-dark);
-font-family: var(--font-arial);
+body {
+  background-color: var(--colour-dark);
+  font-family: var(--font-arial);
 }
 
-h1{
+h1 {
   color: var(--colour-peach);
   font-family: var(--font-georgia);
   font-size: calc(55px + 0.39065vw);
 }
 
-h2{
+h2 {
   color: var(--colour-orange);
   font-size: calc(36px + 0.39065vw);
   font-family: var(--font-georgia);
@@ -52,29 +56,30 @@ h2{
   margin-bottom: 1vh;
 }
 
-p{
+p {
   font-family: var(--font-arial);
   font-size: calc(14px + 0.39065vw);
   line-height: 3vh;
 }
 
-button{
+button {
   background-color: var(--colour-brown);
   color: var(--colour-peach);
   padding: 1.5vh 3vw;
   font-family: var(--font-arial);
   font-size: calc(14px + 0.39065vw);
   border: none;
+  cursor: pointer;
 }
 
-button:hover{
-background-color: var(--colour-orange);
-transition: 250ms;
+button:hover {
+  background-color: var(--colour-orange);
+  transition: 250ms;
 }
 
 /* ------------ nav ---------------------- */
 
-nav{
+nav {
   height: 75px;
   background-color: var(--nav-colour);
   display: flex;
@@ -86,12 +91,12 @@ nav{
   z-index: 1234;
 }
 
-.logo{
+.logo {
   margin-left: 0.5vw;
   margin-top: 0.5vw;
 }
 
-nav div{
+nav div {
   display: flex;
   width: 15%;
   margin-right: 5%;
@@ -99,7 +104,7 @@ nav div{
   align-items: end;
 }
 
-.navlink{
+.navlink {
   color: var(--colour-peach);
   text-decoration: none;
   font-family: var(--font-arial);
@@ -108,27 +113,28 @@ nav div{
 
 /* -------------------- forside -------------------- */
 
-.landingboks{
-position: relative;
-width: 70vw;
-height: 50vh;
-background-color: var(--colour-brown); /* evt. en varmere brun? */
-border: var(--colour-peach) solid 2px;
-margin: auto;
-margin-top: 14%;
-z-index: 1;
-display: flex;
-justify-content: space-between;
-align-items: center;
+.landingboks {
+  position: relative;
+  width: 70vw;
+  height: 50vh;
+  background-color: var(--colour-brown);
+  /* evt. en varmere brun? */
+  border: var(--colour-peach) solid 2px;
+  margin: auto;
+  margin-top: 14%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.landingboks div{
+.landingboks div {
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.landingboks h1{
+.landingboks h1 {
   color: var(--colour-peach);
   font-family: var(--font-georgia);
   font-size: calc(55px + 0.39065vw);
@@ -137,20 +143,20 @@ align-items: center;
   letter-spacing: 0.3vw;
 }
 
-.landingboks img{
+.landingboks img {
   width: 20vw;
   height: auto;
   margin-right: 11vw;
 }
 
-.landingboks span{
+.landingboks span {
   font-family: 'freestyle script', "apple chancery", sans-serif;
   color: var(--colour-orange);
   font-size: 96px;
   letter-spacing: 1vw;
 }
 
-.bookmoedeboks{
+.bookmoedeboks {
   position: absolute;
   background-color: var(--colour-peach);
   color: var(--colour-brown);
@@ -158,57 +164,59 @@ align-items: center;
   padding-top: 2vh;
   right: 17vw;
   bottom: 13vh;
-  z-index:22;
+  z-index: 22;
 }
 
-.bookmoedeboks p{
-font-size: calc(18px + 0.39065vw);
-margin-bottom: 1vh;
+.bookmoedeboks p {
+  font-size: calc(18px + 0.39065vw);
+  margin-bottom: 1vh;
 }
 
-
-.outline{
-position: absolute;
-border: var(--colour-peach) solid 2px;
-width: 70vw;
-height: 50vh;
-top: 20%;
-left: 10%;
+.outline {
+  position: absolute;
+  border: var(--colour-peach) solid 2px;
+  width: 70vw;
+  height: 50vh;
+  top: 20%;
+  left: 10%;
 }
 
-.textboks{
+.textboks {
   width: 70vw;
   height: auto;
   margin: auto;
   margin-top: 20vh;
 }
 
-.textboks p{
+.textboks p {
   color: var(--colour-peach);
 }
 
-.textboks p:first-of-type{
+.textboks p:first-of-type {
   margin-bottom: 2vh;
 }
 
-.righttekst p, .lefttekst p{
+.righttekst p,
+.lefttekst p {
   color: var(--colour-peach);
   width: 80%;
 }
 
-.righttekst p:first-of-type, .lefttekst p:first-of-type{
+.righttekst p:first-of-type,
+.lefttekst p:first-of-type {
   margin-bottom: 2vh;
 }
 
-.righttekst, .lefttekst{
+.righttekst,
+.lefttekst {
   width: 70vw;
-  margin:auto;
-  position: relative; 
+  margin: auto;
+  position: relative;
   margin-bottom: 15vh;
   margin-top: 5vh;
 }
 
-.lilleboks{
+.lilleboks {
   position: absolute;
   width: 25vw;
   height: 35vh;
@@ -219,47 +227,53 @@ left: 10%;
   background: var(--colour-brown);
 }
 
-.lefttekst .lilleboks{
+.lefttekst .lilleboks {
   right: 0;
   top: 8vh;
 }
 
-.righttekst .lilleboks{
+.righttekst .lilleboks {
   left: 0;
   top: 8vh;
 }
-.lottie{
+
+.lottie {
   width: 90%;
-  margin:auto;
+  margin: auto;
   padding: 0;
 }
-.righttekst .storboks{
+
+.righttekst .storboks {
   margin-left: 20vw;
   box-sizing: border-box;
   padding-left: 7.5vw;
 }
 
-.storboks{
+.storboks {
   width: 50vw;
   height: 50vh;
   border: var(--colour-peach) 2px solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
-.imgleft .lilleboks, .imgright .lilleboks{
+
+.imgleft .lilleboks,
+.imgright .lilleboks {
   flex-direction: column;
 }
-.imgleft .storboks, .imgright .storboks{
-  padding:0;
+
+.imgleft .storboks,
+.imgright .storboks {
+  padding: 0;
 }
-.lefttekst .storboks{
+
+.lefttekst .storboks {
   padding-left: 2vw;
   padding-top: 2vh;
 }
 
-.greenhushwash{
+.greenhushwash {
   width: 70vw;
   height: 150%;
   display: flex;
@@ -269,24 +283,24 @@ left: 10%;
   padding-bottom: 5vh;
 }
 
-.greenhushwash h2{
+.greenhushwash h2 {
   text-align: center;
 }
 
-.greenhushwash p{
+.greenhushwash p {
   color: var(--colour-peach);
   width: 75%;
-  margin:auto;
+  margin: auto;
   hyphens: auto;
 }
 
-.linje{
+.linje {
   height: auto;
   width: 2px;
   background-color: var(--colour-peach);
 }
 
-.anmeldelsesbillede{
+.anmeldelsesbillede {
   width: 20vw;
   position: absolute;
   left: 2.5vw;
@@ -295,14 +309,14 @@ left: 10%;
 
 /* ----------------- foooter ----------------- */
 
-footer{
-background-color: var(--colour-peach);
-height: 50vh;
-margin-top: 20vh;
-color: var(--colour-brown)
+footer {
+  background-color: var(--colour-peach);
+  height: 50vh;
+  margin-top: 20vh;
+  color: var(--colour-brown)
 }
 
-footer div{
+footer div {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -310,44 +324,45 @@ footer div{
   margin: auto;
 }
 
-.formular{
+.formular {
   display: flex;
   flex-direction: column;
   align-items: end;
   margin-top: 5vh;
 }
 
-.kontakt{
+.kontakt {
   display: flex;
   flex-direction: column;
   align-items: start;
 }
 
 
-footer form{
+footer form {
   display: flex;
   flex-direction: column;
 }
 
-footer h3{
-font-family: var(--font-georgia);
-font-size: calc(32px + 0.39065vw);
-font-weight: 400;
-margin-bottom: 5vh;
+footer h3 {
+  font-family: var(--font-georgia);
+  font-size: calc(32px + 0.39065vw);
+  font-weight: 400;
+  margin-bottom: 5vh;
 }
 
-footer a, footer p{
-color: var(--colour-brown);
-text-decoration: none;
-margin-top: 1vh;
-font-size: calc(15px + 0.39065vw);
+footer a,
+footer p {
+  color: var(--colour-brown);
+  text-decoration: none;
+  margin-top: 1vh;
+  font-size: calc(15px + 0.39065vw);
 }
 
-footer a:nth-child(3) img{
+footer a:nth-child(3) img {
   width: 25px;
 }
 
-input{
+input {
   border: none;
   background-color: var(--colour-light);
   color: var(--colour-brown);
@@ -357,7 +372,7 @@ input{
   font-family: var(--font-arial);
 }
 
-#meetinginfo{
+#meetinginfo {
   height: 5vh;
   resize: none;
   border: none;
@@ -369,132 +384,134 @@ input{
   font-family: var(--font-arial);
 }
 
-.formular button{
+.formular button {
   padding: 1.4vh 1vw;
 }
 
 /* -------------- til log ind side ---------------- */
 
-.logside img{
+.logside img {
   width: 20vw;
   height: auto;
   border: solid 2px var(--colour-orange);
   padding: 2% 6% 2% 1%;
 }
 
-.logside{
+.logside {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
   width: 70%;
-  margin:auto;
+  margin: auto;
 }
 
-.logside form{
+.logside form {
   display: flex;
   flex-direction: column;
 }
 
-.logside input{
+.logside input {
   border: var(--colour-orange) solid 2px;
   background-color: var(--colour-brown);
   color: var(--colour-light);
 }
 
-.logside ::placeholder{
+.logside ::placeholder {
   color: var(--colour-peach);
 }
 
-.logside button{
+.logside button {
   color: var(--colour-brown);
   background-color: var(--colour-orange);
 }
 
 /* --------  bruger/ admin side ----------- */
-.moedeside{
+.moedeside {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.page{
+.page {
   width: 70vw;
   height: auto;
   background-color: var(--colour-brown);
   border: var(--colour-peach) 2px solid;
 }
 
-.page h1{
+.page h1 {
   font-size: calc(39px + 0.39065vw);
   margin: 1vh 2vw;
 }
-.page p{
+
+.page p {
   color: var(--colour-orange);
   margin-left: 2vw;
 }
 
-.nyemoeder{
+.nyemoeder {
   color: var(--colour-peach);
   display: flex;
   flex-direction: row;
 }
 
-.aktivemoeder{
+.aktivemoeder {
   color: var(--colour-orange);
   display: flex;
   flex-direction: row;
 }
 
-.kundemoede div{
-  margin: 1vh 2vw; 
+.kundemoede div {
+  margin: 1vh 2vw;
 }
 
-.sletknap{
+.sletknap {
   border: #fdce9a solid 2px;
   margin-top: 1vh;
   padding: 1vh 0 0 0;
   width: 100%;
 }
-.sletknap img{
+
+.sletknap img {
   width: 1.5vw;
 }
 
-.firesektioner{
+.firesektioner {
   text-align: center;
   margin-top: 20vh;
 }
 
-.firesektioner div{
-display: flex;
-justify-content: space-between;
-width: 70vw;
-margin: auto;
-color: #fdce9a;
+.firesektioner div {
+  display: flex;
+  justify-content: space-between;
+  width: 70vw;
+  margin: auto;
+  color: #fdce9a;
 }
 
-.firesektioner div section{
+.firesektioner div section {
   border: #fdce9a solid 2px;
   width: 20%;
 }
 
-.firesektioner h1{
+.firesektioner h1 {
   color: #de922f;
 }
 
-.vaerdi{
+.vaerdi {
   width: 70vw;
   margin: auto;
   margin-top: 10vh;
 }
 
-@media screen and (max-width: 1400px){
-  .bookmoedeboks{
+@media screen and (max-width: 1400px) {
+  .bookmoedeboks {
     bottom: 20vh;
   }
 
-  nav div{
+  nav div {
     display: flex;
     width: 20%;
     margin-right: 5%;
@@ -502,66 +519,162 @@ color: #fdce9a;
     align-items: end;
   }
 
-  .outline{
+  .outline {
     position: absolute;
     border: var(--colour-peach) solid 2px;
     width: 70vw;
     height: 50vh;
     top: 12%;
     left: 10%;
-    }
-  .anmeldelsesbillede{
+  }
+
+  .anmeldelsesbillede {
     bottom: 0vh;
   }
 }
 
-@media screen and (max-width: 1000px){
- .landingboks, .outline, .textboks, .righttekst, .lefttekst, .greenhushwash, footer div, .page, .firesektioner div, .vaerdi{
- width: 80vw;
- }
- .storboks{
-  width: 100%;
-  margin: 0;
-  height: auto;
- }
- .imgleft .storboks, .imgright .storboks{
-  border:none;
- }
- .imgleft .lilleboks, .imgright .lilleboks{
-  padding: 10% 0;
+@media screen and (max-width: 1000px) {
+  nav div {
+    width: 20%;
   }
- .lilleboks{
-  position: relative;
-  width: 100%;
-  height: auto;
-  margin: 0;
- }
- .righttekst .storboks, .lefttekst .storboks{
-  margin-left: 0;
-  margin: auto;
-  padding: 0;
- }
- .righttekst p, .lefttekst p {
-  margin: auto;
- }
- .righttekst h2, .lefttekst h2 {
-  margin: auto;
-  width: 80%
- }
- .righttekst .lilleboks, .lefttekst .lilleboks {
-  top:0;
+
+  .logo {
+    height: 10vh;
+    margin-top: 2vw;
   }
-  .anmeldelsesbillede{
-    position:relative;
+
+  .landingboks {
+    height: 40vh;
   }
-  .lefttekst:last-of-type{
-    background-color: none;
-    display: flex;
-    border: none;
-    flex-direction: column-reverse;
+
+  .outline {
+    height: 40vh;
   }
-  .lefttekst:last-of-type .lilleboks{
-    background-color: #141414;
-    border: none;
+
+  h1 {
+    font-size: calc(42px + 0.39065vw) !important;
+  }
+
+  .landingboks span {
+    font-size: 70px;
+  }
+
+  .landingboks img {
+    margin-right: 9vw;
+  }
+
+  .bookmoedeboks {
+    bottom: 33vh;
+    z-index: 22;
+  }
+
+  h2 {
+    font-size: calc(24px + 0.39065vw);
+  }
+
+  p {
+    font-size: calc(12px + 0.39065vw);
+  }
+
+  .lilleboks {
+    width: 35vw;
+  }
+
+  .lefttekst .lilleboks {
+    top: 6vh;
+  }
+
+  .righttekst .lilleboks {
+    top: 5vh;
+  }
+
+  .storboks {
+    height: 45vh;
+  }
+
+  .storboks p {
+    width: 60%;
+  }
+
+  .lottie {
+    width: 90%;
+    margin: auto;
+    padding: 0;
+  }
+
+  .imgleft .storboks .lottie {
+    padding-left: 7.5vw;
+  }
+
+  .imgright .storboks .lottie {
+    border: 1px solid blueviolet;
+    width: 350px;
+    position: absolute;
+    top: 10vw;
+    padding-right: 10vw;
+  }
+
+  .anmeldelsesbillede {
+    padding: 0 0 2vh 5vw;
   }
 }
+
+@media screen and (max-width: 950px) {
+  nav div {
+    width: 25%;
+  }
+
+  .landingboks {
+    height: 35vh;
+  }
+
+  .outline {
+    height: 35vh;
+    left: 12.5%;
+  }
+
+
+  .bookmoedeboks {
+    bottom: 40vh;
+    z-index: 22;
+  }
+
+  .bookmoedeboks p {
+    font-size: calc(14px + 0.39065vw);
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .imgright .storboks .lottie {
+    position: absolute;
+    border: 1px solid blueviolet;
+    top: 12vw;
+    left: -1vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .outline {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 755px) {
+  nav div {
+    width: 30%;
+  }
+
+  .bookmoedeboks {
+    bottom: 40vh;
+    z-index: 22;
+  }
+
+  .bookmoedeboks p {
+    font-size: calc(12px + 0.39065vw);
+  }
+
+  .bookmoedeboks .button {}
+
+}
+
+@media screen and (max-width: 675px) {}
