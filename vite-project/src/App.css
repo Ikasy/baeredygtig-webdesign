@@ -512,6 +512,11 @@ input {
   margin-top: 10vh;
 }
 
+.lilleboks img{
+  max-width: 20vw;
+  height: auto;
+}
+
 @media screen and (max-width: 1400px) {
   .bookmoedeboks {
     bottom: 20vh;
@@ -595,7 +600,7 @@ input {
   }
 
   .storboks {
-    height: 45vh;
+    max-height: 45vh;
   }
 
   .storboks p {
@@ -689,8 +694,50 @@ input {
     top: 12vw;
     left: -5vw;
 }
+} 
+
+@media screen and (max-width: 700px) {
+  .lottie {
+    max-width: 50vw;
+    height: auto;
+  }
+
+  .landingboks, .outline, .textboks, .righttekst, .lefttekst, footer div, .page, .firesektioner div, .vaerdi {
+    width: 80vw;
+  }
+
+  .lefttekst{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: auto;
+  }
+
+  .lefttekst .lilleboks{
+    position: relative;
+    margin: auto;
+    width: 100%;
+  }
+
+  .lefttekst .storboks{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lefttekst .storboks h2, .lefttekst .storboks p{
+    width: 80%;
+  }
+
+  nav{
+    height: 45px;
+  }
+
 }
-
-@media screen and (max-width: 675px) {
-
+@media screen and (max-width: 500px) {
+  .lottie{
+    max-width: 70vw;
+    height: auto;
+  }
 }
