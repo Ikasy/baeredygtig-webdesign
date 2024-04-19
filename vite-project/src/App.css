@@ -111,6 +111,63 @@ nav div {
   font-size: calc(15px + 0.39065vw);
 }
 
+/* Stil for dropdown-menu container */
+.dropdown-menu {
+  position: relative;
+  display: none;
+}
+.dropdown-menu button{
+  padding: 0;
+}
+.dropdown-menu button:hover {
+  background: none;
+}
+.dropdown-menu button img {
+  width: 20%;
+}
+
+/* Stil for dropdown-menu knappen */
+.dropdown-button {
+  background: none;
+  color: var(--colour-brown);
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+}
+
+/* Stil for dropdown-menu indholdet */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: var(--colour-brown);
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Vis dropdown-menu indholdet, når knappen klikkes */
+.dropdown-menu:hover .dropdown-content {
+  display: block;
+}
+
+/* Stil for dropdown-menu links */
+.dropdown-content a {
+  color: var(--colour-peach);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border: var(--colour-orange) solid 1px;
+
+}
+
+/* Ændr farven på links ved hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+
 /* -------------------- forside -------------------- */
 
 .landingboks {
