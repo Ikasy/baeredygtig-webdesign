@@ -610,7 +610,6 @@ input {
   }
 
   .imgright .storboks .lottie {
-    border: 1px solid blueviolet;
     width: 350px;
     position: absolute;
     top: 10vw;
@@ -651,12 +650,20 @@ input {
   .outline {
     display: none;
   }
-  
+
   .imgright .storboks .lottie {
     position: absolute;
-    border: 1px solid blueviolet;
     top: 12vw;
     left: -1vw;
+  }
+
+  .lefttekst .storboks h2 {
+    width: 50%;
+  }
+
+  .logo {
+    height: 8.5vh;
+    margin-top: 2vw;
   }
 }
 
@@ -674,8 +681,13 @@ input {
     font-size: calc(12px + 0.39065vw);
   }
 
-  .bookmoedeboks .button {}
-
+  .imgright .storboks .lottie {
+    position: absolute;
+    top: 12vw;
+    left: -5vw;
+}
 }
 
-@media screen and (max-width: 675px) {}
+@media screen and (max-width: 675px) {
+
+}
