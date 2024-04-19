@@ -5,9 +5,13 @@ import Foot from "../Components/foot"
 import mission from "../assets/mission.svg"
 import teleskop from "../assets/teleskop.svg"
 import globe from "../assets/globe.svg"
+import { useEffect } from "react"
 // link til firebase: https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/
 function Omosside() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []) 
 
   return (
     <>

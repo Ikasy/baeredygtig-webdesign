@@ -645,17 +645,15 @@ input {
 }
 
 @media screen and (max-width: 899px) {
+  .outline {
+    display: none;
+  }
+  
   .imgright .storboks .lottie {
     position: absolute;
     border: 1px solid blueviolet;
     top: 12vw;
     left: -1vw;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .outline {
-    display: none;
   }
 }
 

@@ -14,6 +14,7 @@ import internetpit from "../assets/internetpit.json"
 import kina from "../assets/kina.json"
 
 import textureImage from '../assets/firkanter.svg';
+import { useEffect } from 'react'
 
 // link til firebase: https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/
 function Forside() {
@@ -23,6 +24,10 @@ function Forside() {
     footer.scrollIntoView({ behavior: 'smooth' });
     console.log("virker");
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   // javascript her
 
