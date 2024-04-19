@@ -109,12 +109,14 @@ function handleButton(event) {
 }
 
   return (
-    <div className="moedeside">
+    <>
+    
+    <div className="moedeside" style={{flexDirection:"column"}}>
       <section className="page">
         <h1>Kalender</h1>
         <p>{status}</p>
         {filtrerMoeder.length > 0 && isPosts ? (
-          <div className="nyemoeder">
+          <div className="nyemoeder" style={{flexWrap:"wrap"}}>
             {filtrerMoeder.map((moederobjekt) => (
               <Kundemoede key={moederobjekt.id} moeder={moederobjekt} handleButton={handleButton}/>
             ))}
@@ -124,10 +126,10 @@ function handleButton(event) {
         )}
           
       </section>
-      <h2>Du er logget på som {user && userInSession && user.email}</h2>
+      <h2 style={{marginTop:"5vh"}}>Du er logget på som {user && userInSession && user.email}</h2>
             <button onClick={handleLogout}>Logout</button>
     </div>
-    
+    </>
   )
 }
 

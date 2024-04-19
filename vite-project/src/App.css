@@ -431,17 +431,20 @@ input {
 }
 /* --------  bruger/ admin side ----------- */
 .moedeside {
-  height: 100vh;
+  margin-top: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.adminknap{
+  padding: 0;
+  width: 100%;
+}
 .page {
   width: 70vw;
-  height: auto;
   background-color: var(--colour-brown);
   border: var(--colour-peach) 2px solid;
+  
 }
 
 .page h1 {

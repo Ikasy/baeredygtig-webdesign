@@ -116,7 +116,7 @@ function handleButton(event) {
         <h1>Kommende møder</h1>
         <p>{status}</p>
         {nyeMoeder.length > 0 && isPosts ? (
-          <div className="nyemoeder">
+          <div className="nyemoeder" style={{width:"100%"}}>
             {nyeMoeder.map((moederobjekt) => (
               <Meeting key={moederobjekt.id} moeder={moederobjekt}
                 handleButton={handleButton} />
@@ -127,7 +127,7 @@ function handleButton(event) {
         )}
   
         {aktiveMoeder.length > 0 && isPosts ? (
-          <div className="aktivemoeder">
+          <div className="aktivemoeder" style={{width:"100%"}} >
             {aktiveMoeder.map((moederobjekt) => (
               <Meeting key={moederobjekt.id} moeder={moederobjekt}
                 handleButton={handleButton} />
