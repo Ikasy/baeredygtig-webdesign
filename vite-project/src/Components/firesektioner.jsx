@@ -12,7 +12,7 @@ function Firesektioner (props) {
                      Leila 
                     </h3>
                     <p>
-                        brødtekst
+                        Director
                     </p>
                 </section>
 
@@ -22,7 +22,7 @@ function Firesektioner (props) {
                      Charlotte  
                     </h3>
                     <p>
-                        brødtekst
+                        Executive
                     </p>
                 </section>
 
@@ -32,7 +32,7 @@ function Firesektioner (props) {
                      Julie
                     </h3>
                     <p>
-                        brødtekst
+                        Manager
                     </p>
                 </section>
 
@@ -42,7 +42,7 @@ function Firesektioner (props) {
                      Anne-Mette
                     </h3>
                     <p>
-                        brødtekst
+                        Coordinater
                     </p>
                 </section>
 

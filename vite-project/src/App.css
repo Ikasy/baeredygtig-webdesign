@@ -584,6 +584,10 @@ input {
   max-width: 20vw;
   height: auto;
 }
+#test .lefttekst .lilleboks .lottie{
+  margin: 0;
+  width: 0;
+}
 
 @media screen and (max-width: 1400px) {
   .bookmoedeboks {
@@ -666,13 +670,24 @@ input {
   .righttekst .lilleboks {
     top: 5vh;
   }
-
+  
   .storboks {
     max-height: 45vh;
   }
 
   .storboks p {
     width: 60%;
+  }
+  #omos .lefttekst .lilleboks .lottie{
+    margin: 0;
+    width: 0;
+  }
+  .righttekst .storboks p {
+    padding-left: 25%;
+    width: 70%;
+  }
+  .righttekst .storboks h2 {
+    padding-left: 25%;
   }
 
   .lottie {
@@ -768,6 +783,31 @@ input {
     top: 12vw;
     left: -5vw;
   }
+
+  #omos .lefttekst .lilleboks, #omos .righttekst .lilleboks{
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+    padding: 0;
+    width: 100%;
+  }
+  #omos .lefttekst .storboks, #omos .righttekst .storboks{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  #omos .lefttekst .storboks p, #omos .righttekst .storboks p, #omos .lefttekst .storboks h2, #omos .righttekst .storboks h2{
+    padding: 0;
+    margin: 0;
+    width: 60%;
+  }
+  #omos .righttekst, #omos .lefttekst {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -813,11 +853,35 @@ input {
   .lefttekst .storboks p {
     width: 80%;
   }
-
+  #omos .lefttekst .lilleboks, #omos .righttekst .lilleboks{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  #omos .lefttekst .storboks p, #omos .righttekst .storboks p{
+    width: 90%;
+  }
+  #omos .lefttekst .storboks h2, #omos .righttekst .storboks h2{
+    width: 90%;
+  }
   nav {
     height: 45px;
   }
-
+  nav div{
+    text-align: right;
+    margin: 0;
+    width: 60%;
+  }
+  .navlink{
+    display: none;
+  }
+  .dropdown-menu{
+    display: inline-block;
+    width: 100%;
+  }
+  .dropdown-menu button img {
+  width: 10%;
+  }
   h1 {
     font-size: calc(32px + 0.39065vw) !important;
   }
@@ -865,7 +929,6 @@ input {
   .textboks {
     margin-top: 5vh;
   }
-
 
   .imgright,
   .imgleft, .lefttekst, .righttekst {
@@ -972,8 +1035,14 @@ input {
     margin-bottom: 5vw !important;
   }
 
-
-
+  .logside{
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 20vh;
+  }
+  .logside img{
+    width: 60vw;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -984,6 +1053,9 @@ input {
 
   .anmeldelsesbillede {
     width: 30vw !important;
+  }
+  .dropdown-menu button img {
+    width: 15%;
   }
 
 }

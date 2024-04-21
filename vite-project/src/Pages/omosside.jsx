@@ -17,8 +17,8 @@ function Omosside() {
     <>
       <Firesektioner></Firesektioner>
       
-      <h2 className="vaerdi">Vores værdier</h2> 
-      
+      <h2  className="vaerdi">Vores værdier</h2> 
+      <div id="omos">
       <Righttext 
         overskrift="Mission"
         tekst="Vores mission er at oplyse og opbygge en fælles forståelse for vigtigheden af en fremtidig bæredygtig kurs. Dette vil opnås ved at fremhæve de fordele, der følger med forskellige bæredygtige tiltag ud over deres direkte bæredygtige virkninger. "
@@ -40,7 +40,7 @@ function Omosside() {
         src={globe}
         alt="Ikon af globe"
         ></Righttext>
-      
+      </div>
       
       <Foot></Foot>
     </>
