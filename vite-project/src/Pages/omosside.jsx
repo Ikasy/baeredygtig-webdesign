@@ -15,8 +15,6 @@ function Omosside() {
 
   return (
     <>
-      <Firesektioner></Firesektioner>
-      
       <h2  className="vaerdi">Vores værdier</h2> 
       <div id="omos">
       <Righttext 
@@ -40,8 +38,13 @@ function Omosside() {
         src={globe}
         alt="Ikon af globe"
         ></Righttext>
+
       </div>
-      
+      <Firesektioner></Firesektioner>
+      <p className="tilbud" style={{marginTop:"5vh"}}>Plan.et blev grundlagt som respons på det overraskende indblik i bæredygtigt webdesign og manglen af brug herpå, som blev opdaget gennem undervisningen i multimediedesign. Oprettelsen af webbureauet Plan.et er derfor en reaktion på et tydeligt behov for at balance-re kommunikation og inspiration omkring mere bæredygtige webprincipper.</p>
+        <p className="tilbud">Uden Plan.et ville der mangle nogen til at tale højt om internettets og it-branchens miljø-skadelige praktikker. Der ville ligeledes mangle en ressource til at inspirere og uddanne i vigtigheden af bæredygtighed i digitale løsninger.</p>
+        <p className="tilbud">Man bør vælge at købe digitale løsninger fra Plan.et, hvis man ønsker, at ens website skal være mere bæredygtig. Hvis man er interesseret i at lære mere om bæredygtigt webdesign eller gerne vil hjælpe med at sprede budskabet derom, så er webbureauet Plan.et til for at hjælpe.</p>
+
       <Foot></Foot>
     </>
     

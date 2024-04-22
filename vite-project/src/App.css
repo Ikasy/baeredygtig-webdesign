@@ -115,6 +115,7 @@ nav div {
 .dropdown-menu {
   position: relative;
   display: none;
+  margin-right: 3vw;
 }
 .dropdown-menu button{
   padding: 0;
@@ -170,7 +171,9 @@ nav div {
   margin: 0;
   width: 0;
 }
-
+.person{
+  width: 100%;
+}
 /* -------------------- forside -------------------- */
 
 .landingboks {
@@ -247,12 +250,23 @@ nav div {
   top: 20%;
   left: 10%;
 }
-
+h2.tilbud{
+  color: var(--colour-orange);
+  margin-bottom: 0;
+  margin-top: 15vh;
+}
+.tilbud{
+  width: 70vw;
+  color: var(--colour-peach);
+  margin: 2vh auto 0 auto;
+}
+p.tilbud:last-of-type{
+  margin-bottom: 10vh;
+}
 .textboks {
   width: 70vw;
   height: auto;
   margin: auto;
-  margin-top: 20vh;
 }
 
 .textboks p {
@@ -557,7 +571,7 @@ input {
 
 .firesektioner {
   text-align: center;
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 
 .firesektioner div {
@@ -580,7 +594,7 @@ input {
 .vaerdi {
   width: 70vw;
   margin: auto;
-  margin-top: 10vh;
+  margin-top: 20vh;
 }
 
 .lilleboks .billede {
@@ -786,7 +800,13 @@ input {
     top: 12vw;
     left: -5vw;
   }
-
+  .firesektioner div{
+    flex-direction: column;
+  }
+  .firesektioner div section{
+    width: 100%;
+    margin-bottom: 5vh;
+  }
   #omos .lefttekst .lilleboks, #omos .righttekst .lilleboks{
     position: relative;
     top: auto;
@@ -836,7 +856,9 @@ input {
     flex-direction: column-reverse;
     margin: auto;
   }
-
+  .tilbud{
+    width: 80vw;
+  }
   .lefttekst .lilleboks {
     position: relative;
     margin: auto;

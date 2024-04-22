@@ -36,6 +36,12 @@ function Forside() {
       <Landing scrollToFooter={scrollToFooter}>
       </Landing>
 
+      <h2 className='tilbud'>Vidste du...</h2>
+      <p className='tilbud'>... at farven blå kræver mere energi og udleder derfor mere CO2 end andre farver? </p>
+
+      <p className='tilbud'>Eller at billeders forskellige filtyper kan have vidt forskellige størrelser, og at deres størrelse kan have en en effekt på dit websites performance? </p>
+
+      <p className='tilbud'>Måske gør du, men vi vil rigtig gerne hjælpe dig med at få et optimeret og mere miljøvenlig website. </p>
       <Textboks overskrift="Hvad tilbyder vi?"
         tekst="Hos Plan.et tilbyder vi skræddersyede hjemmesideløsninger med fokus på bæredygtigt webdesign. Vores dedikerede team af webdesignere og udviklere stræber efter at skabe smukke og funktionelle hjemmesider, der overholder principperne om miljømæssig bæredygtighed."
         tekst2="Velkommen til Plan.et, hvor vi prioriterer både din online succes og vores planets fremtid.">
