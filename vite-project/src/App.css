@@ -166,7 +166,10 @@ nav div {
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
-
+#omos .lefttekst .lilleboks .lottie{
+  margin: 0;
+  width: 0;
+}
 
 /* -------------------- forside -------------------- */
 
