@@ -20,10 +20,16 @@ function Brugerside() {
 
   const [filtrerMoeder, setFiltrerMoeder]=useState([]);
 
+  // useEffect til at sikre, at brugeren er logget ind, når komponenten monteres
   useEffect(() => {
+    //Hvis der stadig indlæses, eller hvis der ikke er nogen bruger, naviger til login-siden
           if (loading) return;
           if (!user) return navigate("/login");
   }, [user, loading, navigate]);
+
+  /* Denne useEffect køres, når komponenten indlæses, og den tjekker om loading og user ændrer sig.
+  Hvis brugeren endnu ikke er blevet hentet fra Firebase Authentication (dvs. loading er sand), 
+  eller hvis der ikke er nogen bruger (dvs. user er falsk), navigerer den brugeren til login-siden.*/
 
   async function handleLogout() {
       try {
@@ -35,8 +41,10 @@ function Brugerside() {
       }
   }
 
+  // useEffect til at hente møder fra Firebase Realtime Database
   useEffect(() => {
       async function getPosts(){
+        // hent møder fra Firebase Realtime Database
           const url ='https://baeredygtig-webdesign-default-rtdb.europe-west1.firebasedatabase.app/moeder.json';
 
           // vent indtil response modtager positivt svar fra firebase
@@ -47,6 +55,7 @@ function Brugerside() {
           /* tjek om der faktisk er møder på listen (positiv hvis
               forskellig fra null) */
           if (data !==null){
+            // Konverter data til et array a møder
               const postArray = Object.keys(data).map((key)=>
               ({
                   id: key,
@@ -55,15 +64,15 @@ function Brugerside() {
               setPosts(postArray)
               //console.log(postArray);
           } else {
+            // hvis der ikke er nogen møder, set isPosts til falsk
               setItPosts(false);
           }
       }
-
   getPosts();
 
   // Filtrering af møder efter "nyt møde" eller "aktive møde"
   setFiltrerMoeder(posts.filter(moeder => moeder.email === sessionStorage.getItem("user")));
- 
+
 
   }, [status, posts]);
 

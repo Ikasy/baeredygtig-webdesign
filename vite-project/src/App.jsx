@@ -26,11 +26,14 @@ function App() {
     <Route path="*" element={<Navigate to="/" />}></Route>
   </Routes>
 </main>
-
-
     </>
-
-
+/* Det er her SPA - single page application bliver brugt, så når man inde i main.jsx har indsat en 'BrowserRoute' omkring 'app',
+så skal man her defienre hvilke routes der er tale om. Routes er de ruter som siden skal navigeres rundt på/ med,
+det vil sige at når vi har en route path til "/" så er der tale om forsiden altså: plan.et.julielksn.dk/ 
+hvorimod til "/adminside" så fører den til plan.et.julielksn.dk/adminside
+"*" stjernen betyder så at alle andre sider som ikke er specificeret ville føre til en 404 side, 
+eller i vores tilfælde har vi valgt at alle andre urls/ routes skal føre tilbage til forsiden. 
+Fx ville plan.et.julielksn.dk/købside føre til forsiden.  */
   );
 }
 
